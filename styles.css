@@ -1,0 +1,67 @@
+:root {
+  color-scheme: light dark;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.container {
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 0 1rem 2rem;
+}
+
+.subtitle {
+  margin-top: -0.4rem;
+  color: #4b5563;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  padding: 0.55rem;
+}
+
+button {
+  border: none;
+  border-radius: 0.4rem;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+#reminder-list {
+  padding-left: 1.2rem;
+}
+
+#reminder-list li {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin-top: 1rem;
+  }
+}

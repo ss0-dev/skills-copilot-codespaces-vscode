@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Routine Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Daily Routine Tracker</h1>
+      <p class="subtitle">Track study, physical activity, nutrition, and reminders.</p>
+
+      <section class="card">
+        <h2>Choose a Date</h2>
+        <label for="entry-date">Date</label>
+        <input type="date" id="entry-date" />
+      </section>
+
+      <section class="card">
+        <h2>Daily Habits</h2>
+        <form id="habit-form">
+          <label for="study-hours">Study (hours)</label>
+          <input type="number" id="study-hours" min="0" step="0.5" />
+
+          <label for="activity-minutes">Physical Activity (minutes)</label>
+          <input type="number" id="activity-minutes" min="0" step="5" />
+
+          <label for="nutrition-notes">Nutrition Notes</label>
+          <textarea id="nutrition-notes" rows="3" placeholder="Meals, hydration, calories, etc."></textarea>
+
+          <button type="submit">Save Daily Entry</button>
+        </form>
+        <p id="save-status" aria-live="polite"></p>
+      </section>
+
+      <section class="card">
+        <h2>Reminders</h2>
+        <form id="reminder-form">
+          <label for="reminder-text">Reminder</label>
+          <input type="text" id="reminder-text" required placeholder="e.g. Evening walk" />
+
+          <label for="reminder-time">When</label>
+          <input type="datetime-local" id="reminder-time" required />
+
+          <button type="submit">Add Reminder</button>
+        </form>
+
+        <ul id="reminder-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
